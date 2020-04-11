@@ -6,19 +6,12 @@ class Car {
         console.log(`maxspeed: ${car.maxSpeed}, speed: ${car.speed}, isOn: ${car.isOn}, distance: ${car.distance}, price: ${car.price}`);
     }
 
-    constructor({
-        speed = 0,
-        price,
-        maxSpeed,
-        isOn = false,
-        distance = 0
-
-    }) {
-        this.speed = speed;
+    constructor({price, maxSpeed}) {
+        this.speed = 0;
         this._price = price;
         this.maxSpeed = maxSpeed;
-        this.isOn = isOn;
-        this.distance = distance;
+        this.isOn = true;
+        this.distance = 0;
 
 
     }
@@ -28,7 +21,7 @@ class Car {
       }
 
     set price(value) {
-        return (this._price = value);
+        this._price = value;
       }
   
     /*
